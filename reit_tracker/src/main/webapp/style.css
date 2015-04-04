@@ -15,6 +15,12 @@ body {
 	margin-bottom: 40px;
 }
 
+.logo {
+	position: fixed;
+	top: 15;
+	left: 25;
+}
+
 .clearfix {
 	clear: both;
 }
