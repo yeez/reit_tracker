@@ -2,6 +2,11 @@
 
 <head>
 
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Old Standard TT">
+<link rel="stylesheet" type="text/css"
+	href="http://fonts.googleapis.com/css?family=Rancho&effect=emboss">
+
 <wicket:link>
 	<link rel="stylesheet" type="text/css" href="../style.css" />
 </wicket:link>
@@ -15,37 +20,45 @@
 		<div class="slider">
 
 			<div class="logo">
-				<img src="../Emirates_REIT-h80.png" alt="couldn't load Emirates REIT logo!">
+				<img src="../Emirates_REIT-h80.png"
+					alt="couldn't load Emirates REIT logo!">
 			</div>
 
-			<ul>
-				<li class="category active"><a href="#home">HOME</a></li>
-				<li class="category"><a href="#search">SEARCH</a></li>
-				<li class="category"><a href="#about">ABOUT US</a></li>
-				<li class="category"><a href="#contact">CONTACT US</a></li>
-			</ul>
-			<div class="bar">
-				<div class="before"></div>
-				<a class="knob"></a>
-				<div class="after"></div>
+			<div class="font-effect-emboss">
+				<ul>
+
+					<li class="category active"><a href="#home">Home</a></li>
+					<li class="category"><a href="#projects">Projects</a></li>
+					<li class="category"><a href="#about">About us</a></li>
+					<li class="category"><a href="#contact">Contact</a></li>
+
+				</ul>
+
+				<div class="bar">
+					<div class="before"></div>
+					<a class="knob"></a>
+					<div class="after"></div>
+				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="home" class="container yellow">
-		<h1>Home</h1>
+	<div id="home" class="container home">
+		<h1>Emirates REIT Project Tracker</h1><br>
+		Managing and tracking properties status made easy! Now you can navigate and view projects status 
+		by building and by person responsible.
 	</div>
 
-	<div id="search" class="container red">
-		<h1>Search</h1>
+	<div id="projects" class="container projects">
+		<h1>Projects</h1>
 	</div>
 
-	<div id="about" class="container blue">
+	<div id="about" class="container about">
 		<h1>About</h1>
 	</div>
 
-	<div id="contact" class="container green">
-		<h1>Contact Us</h1>
+	<div id="contact" class="container contact">
+		<h1>Contact</h1>
 	</div>
 
 

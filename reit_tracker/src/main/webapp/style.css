@@ -7,7 +7,8 @@ html,body {
 body {
 	color: #fff;
 	margin: 0 auto;
-	font: 1em/1.3em Helvetica, sans-serif;
+	font: 'Old Standard TT', serif;
+	font-size: 20px;
 	background-color: #333;
 }
 
@@ -19,7 +20,7 @@ body {
 	position: fixed;
 	top: 15;
 	left: 25;
-}
+}	
 
 .clearfix {
 	clear: both;
@@ -34,26 +35,27 @@ body {
 	height: 100%;
 }
 
-.container.blue {
-	background-color: #0099cc;
+.container.about {
+	background-color: #F0D58E;
 }
 
-.container.green {
-	background-color: #9ed846;
+.container.contact {
+	background-color: #F9DC92;
 }
 
-.container.red {
-	background-color: #ff6766;
+.container.projects {
+	background-color: #E7CC89;
 }
 
-.container.yellow {
-	background-color: #f4fa58;
+.container.home {
+	background-color: #DAC081;
 }
 
 
 a {
 	text-decoration: none;
 	color: #fff;
+	font-size: 30px;
 	margin: 0 10px;
 }
 
@@ -95,7 +97,7 @@ h1 {
 	position: relative;
 	left: 3px;
 	width: 100%;
-	background-color: #777;
+	background-color: #645737;
 }
 
 .menu .slider .bar .before {
@@ -129,12 +131,12 @@ h1 {
 
 .menu ul li {
 	margin: 0 40px;
-	font-size: 12px;
+	font-size: 35px;
 	font-weight: bold;
 	float: left;
 }
 
 .menu ul li a {
-	color: #444;
+	color: #645737;
 	margin: 0;
 }
