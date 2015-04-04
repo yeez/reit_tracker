@@ -1,5 +1,54 @@
-<html>
+<html xmlns:wicket="http://wicket.apache.org">
+
+<head>
+
+<wicket:link>
+	<link rel="stylesheet" type="text/css" href="../style.css" />
+</wicket:link>
+
+</head>
+
 <body>
-    <span wicket:id="message">Message goes here</span>
+	<span wicket:id="message"></span>
+
+	<div class="menu">
+		<div class="slider">
+			<ul>
+				<li class="category active"><a href="#home">HOME</a></li>
+				<li class="category"><a href="#search">SEARCH</a></li>
+				<li class="category"><a href="#about">ABOUT US</a></li>
+				<li class="category"><a href="#contact">CONTACT US</a></li>
+			</ul>
+			<div class="bar">
+				<div class="before"></div>
+				<a class="knob"></a>
+				<div class="after"></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="home" class="container yellow">
+		<h1>Home</h1>
+	</div>
+
+	<div id="search" class="container red">
+		<h1>Search</h1>
+	</div>
+
+	<div id="about" class="container blue">
+		<h1>About</h1>
+	</div>
+
+	<div id="contact" class="container green">
+		<h1>Contact Us</h1>
+	</div>
+
+
+	<script
+		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="home.js"></script>
+	
+	
+
 </body>
 </html>

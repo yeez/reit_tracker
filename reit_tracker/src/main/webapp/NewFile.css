@@ -1,5 +1,32 @@
 
 
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section
+	{
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+blockquote,q {
+	quotes: none;
+}
+
+blockquote:before,blockquote:after,q:before,q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 html,body {
 	height: 100%;
 }
@@ -40,10 +67,13 @@ body {
 	background-color: #ff6766;
 }
 
-.container.yellow {
-	background-color: #f4fa58;
+h1 {
+	margin: 40px 0;
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #888;
 }
-
 
 a {
 	text-decoration: none;
@@ -51,12 +81,49 @@ a {
 	margin: 0 10px;
 }
 
-h1 {
-	margin: 40px 0;
-	font-size: 40px;
-	line-height: 40px;
+.btn {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	position: relative;
+	display: inline-block;
+	padding: 10px 20px;
+	height: 50px;
+	background-color: #666;
+	border-radius: 30px;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	line-height: 30px;
+	font-size: 16px;
 	font-weight: bold;
 	text-shadow: 0px 1px 1px #888;
+}
+
+a.btn span.btn {
+	position: absolute;
+	top: 4px;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	background-color: #444;
+}
+
+.btn:active,.btn:active>span.btn {
+	top: 2px;
+}
+
+.btn.active,.btn.active>span.btn {
+	top: 2px;
+}
+
+.btn-small {
+	height: 30px;
+	font-size: 12px;
+	line-height: 10px;
+}
+
+a.btn-small span.btn {
+	height: 30px;
 }
 
 .menu {
@@ -70,7 +137,7 @@ h1 {
 }
 
 .menu .slider {
-	position: fixed;
+	position: relative;
 	left: 10%;
 	width: 80%;
 	text-align: center;

@@ -1,6 +1,9 @@
 package com.reit;
 
 import org.apache.wicket.protocol.http.WebApplication;
+import org.apache.wicket.Page;
+import com.reit.Home;
+
 
 public class ReitTrackerApplication extends WebApplication {
     public ReitTrackerApplication() {
@@ -13,4 +16,6 @@ public class ReitTrackerApplication extends WebApplication {
     public Class getHomePage() {
         return Home.class;
     }
+    
+    
 }
