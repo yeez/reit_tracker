@@ -3,15 +3,26 @@ package com.reit.entities;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table (name = "project")
 public class Project {
 
 	private static long nextId = 0;
 
 	private static final Map<Long, Project> idToProject = new HashMap<Long, Project>();
 
+	@Id
 	private long id;
 	private String projectName;
+	
+	@OneToOne
 	private PersonResponsible personResponsible;
+	@OneToOne
 	private Property property;
 
 	public Project(String tempProjectName, PersonResponsible tempPersonResponsible, Property tempProperty)
