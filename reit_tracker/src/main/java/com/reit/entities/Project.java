@@ -3,6 +3,7 @@ package com.reit.entities;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
@@ -18,10 +19,13 @@ public class Project {
 
 	@Id
 	private long id;
+	
+	@Column(name = "project_name")
 	private String projectName;
 	
 	@OneToOne
 	private PersonResponsible personResponsible;
+	
 	@OneToOne
 	private Property property;
 

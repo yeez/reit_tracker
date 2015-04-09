@@ -1,16 +1,10 @@
 package com.reit;
  
 import junit.framework.TestCase;
- 
-
-
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
- 
-
-
 
 import com.reit.entities.PersonResponsible;
 import com.reit.entities.Project;

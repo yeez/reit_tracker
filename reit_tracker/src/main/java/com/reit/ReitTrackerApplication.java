@@ -1,21 +1,33 @@
 package com.reit;
 
-import org.apache.wicket.protocol.http.WebApplication;
+import java.util.List;
+
 import org.apache.wicket.Page;
-import com.reit.Home;
+import org.apache.wicket.protocol.http.WebApplication;
+
+import com.reit.entities.Project;
+import com.reit.service.ProjectService;
 
 
-public class ReitTrackerApplication extends WebApplication {
-    public ReitTrackerApplication() {
-    }
+public final class ReitTrackerApplication extends WebApplication {
 
-    /**
-     * @see org.apache.wicket.Application#getHomePage()
-     */
-    @Override
-    public Class getHomePage() {
-        return Home.class;
-    }
-    
-    
+	ProjectService projectService;
+	List<Project> projects;
+	
+	public ReitTrackerApplication()
+	{
+		projectService = new ProjectService();
+		projects = projectService.findAll();
+	}
+	@Override
+	public Class<? extends Page> getHomePage()
+	{
+		return Home.class;
+	}
+
+	@Override
+	protected void init()
+	{
+		super.init();
+	}
 }

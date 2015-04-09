@@ -1,5 +1,6 @@
 package com.reit.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -8,10 +9,10 @@ import javax.persistence.Table;
 @Table (name = "person_responsible")
 public class PersonResponsible {
 	
-	private static long nextId = 0;
-	
 	@Id
 	private long id;
+	
+	@Column(name = "name")
 	private String name;
 	
 	public PersonResponsible (long id, String tempName){

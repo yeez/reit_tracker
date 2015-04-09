@@ -1,5 +1,6 @@
 package com.reit.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -13,8 +14,13 @@ public class Property {
 	@Id
 	private long id;
 	
+	@Column(name = "property_type")
 	private PropertyType propertyType;
+	
+	@Column(name = "property_number")
 	private int propertyNumber;
+	
+	@Column(name = "property_owner")
 	private String propertyOwner;
 	
 	public Property (long id, PropertyType tempType, int tempNumber, String tempOwner){
