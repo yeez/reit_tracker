@@ -2,6 +2,8 @@ package com.reit.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,9 +11,11 @@ import javax.persistence.Table;
 @Table (name = "property")
 public class Property {
 	
+	
 	public enum PropertyType { HOTEL, BUILDING, APPARTMENT, HOUSE, NULL}
 	
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 	
 	@Column(name = "property_type")
@@ -23,9 +27,12 @@ public class Property {
 	@Column(name = "property_owner")
 	private String propertyOwner;
 	
-	public Property (long id, PropertyType tempType, int tempNumber, String tempOwner){
+	public Property(){
 		
-		this.id = id;
+	}
+	
+	public Property (PropertyType tempType, int tempNumber, String tempOwner){
+		
 		this.propertyType = tempType;
 		this.propertyNumber = tempNumber;
 		this.propertyOwner = tempOwner;

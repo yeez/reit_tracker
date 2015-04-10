@@ -2,6 +2,8 @@ package com.reit.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -9,14 +11,19 @@ import javax.persistence.Table;
 @Table (name = "person_responsible")
 public class PersonResponsible {
 	
+	
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 	
 	@Column(name = "name")
 	private String name;
 	
-	public PersonResponsible (long id, String tempName){
-		this.id = id;
+	public PersonResponsible(){
+		
+	}
+	
+	public PersonResponsible ( String tempName){
 		this.name = tempName;
 	}
 

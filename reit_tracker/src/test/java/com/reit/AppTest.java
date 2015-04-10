@@ -22,8 +22,8 @@ public class AppTest extends TestCase {
 		Session session = sessionFactory.openSession();
 		session.beginTransaction();
 		
-		PersonResponsible personResponsible = new PersonResponsible (0, "Yasser Rep");
-		Property property = new Property(0, PropertyType.APPARTMENT, 1009, "Yasser");
+		PersonResponsible personResponsible = new PersonResponsible ("Yasser Rep");
+		Property property = new Property(PropertyType.APPARTMENT, 1009, "Yasser");
 		Project project = new Project("test", personResponsible, property );
 		
 		session.save(personResponsible);

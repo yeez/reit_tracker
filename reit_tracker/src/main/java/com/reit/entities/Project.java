@@ -3,8 +3,11 @@ package com.reit.entities;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -13,25 +16,27 @@ import javax.persistence.Table;
 @Table (name = "project")
 public class Project {
 
-	private static long nextId = 0;
-
 	private static final Map<Long, Project> idToProject = new HashMap<Long, Project>();
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
 	
 	@Column(name = "project_name")
 	private String projectName;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private PersonResponsible personResponsible;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)
 	private Property property;
+	
+	public Project(){
+		
+	}
 
 	public Project(String tempProjectName, PersonResponsible tempPersonResponsible, Property tempProperty)
 	{
-		id = nextId++;
 		this.projectName = tempProjectName;
 		this.personResponsible = tempPersonResponsible;
 		this.property = tempProperty;
