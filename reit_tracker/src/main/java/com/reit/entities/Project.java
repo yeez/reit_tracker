@@ -1,8 +1,5 @@
 package com.reit.entities;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,12 +9,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.apache.wicket.util.io.IClusterable;
+
 @Entity
 @Table (name = "project")
-public class Project {
-
-	private static final Map<Long, Project> idToProject = new HashMap<Long, Project>();
-
+public class Project implements IClusterable{
+	
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
 	private long id;
@@ -41,27 +40,8 @@ public class Project {
 		this.personResponsible = tempPersonResponsible;
 		this.property = tempProperty;
 
-		add(this);
 	}
 
-	private void add(final Project project)
-	{
-		boolean hit = false;
-		for (Project value : idToProject.values())
-		{
-			if (value.toString().equals(project.toString()))
-			{
-				project.id = value.id;
-				hit = true;
-				break;
-			}
-		}
-
-		if (hit == false)
-		{
-			idToProject.put(project.id, project);
-		}
-	}
 	
 	@Override
     public final String toString()

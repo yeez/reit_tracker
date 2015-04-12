@@ -44,13 +44,24 @@
 	</div>
 
 	<div id="home" class="container home">
-		<h1>Emirates REIT Project Tracker</h1><br>
-		Managing and tracking properties status made easy! Now you can navigate and view projects status 
-		by building and by person responsible.
+		<h1>Emirates REIT Project Tracker</h1>
+		<br> Managing and tracking properties status made easy! Now you
+		can navigate and view projects status by building and by person
+		responsible.
 	</div>
 
 	<div id="projects" class="container projects">
 		<h1>Projects</h1>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Property Developer</th>
+				<th>Property Owner</th>
+			</tr>
+			<tr wicket:id="rows">
+				<td wicket:id="dataRow"></td>
+			</tr>
+		</table>
 	</div>
 
 	<div id="about" class="container about">
@@ -61,12 +72,9 @@
 		<h1>Contact</h1>
 	</div>
 
-
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="home.js"></script>
-
-
 
 </body>
 </html>
